@@ -29,6 +29,6 @@ foobar.insertDiagram()
 ~~~
 
 
-You can post your notebooks online, and they'll just work.
+You can post your notebooks online, and they'll just work. Here's an example: [https://mrcslws.github.io/ipython-web-graphics-example/example.html](https://mrcslws.github.io/ipython-web-graphics-example/example.html).
 
-Anyone who wants to generate this graphics themselves just needs to install your foobar package. Put it on pypi and have them run `pip install foobar`.
+Anyone who wants to generate this graphics themselves just needs to install your foobar package. Put it on pypi and have them run `pip install foobar`, substituting your own package name.
