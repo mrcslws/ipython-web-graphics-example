@@ -1,0 +1,9 @@
+var tape = require("tape"),
+    foobar = require("../");
+
+tape("foobar.insertSimpleD3Histogram is defined", function(test) {
+  if (!foobar.insertSimpleD3Histogram) {
+    test.error("It's not defined!");
+  }
+  test.end();
+});

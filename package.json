@@ -1,0 +1,29 @@
+{
+  "name": "foobar",
+  "version": "0.0.1",
+  "description": "",
+  "keywords": [],
+  "license": "BSD-3-Clause",
+  "main": "build/foobar-bundle.js",
+  "jsnext:main": "js/index",
+  "homepage": "https://github.com/{USERNAME}/foobar",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/{USERNAME}/foobar.git"
+  },
+  "scripts": {
+    "pretest": "rm -rf build && mkdir build && rollup -c -f umd -n foobar -o build/foobar-bundle.js -- js/index.js && cp build/foobar-bundle.js py/foobar/package_data/foobar-bundle.js",
+    "test": "tape 'js/test/**/*-test.js'",
+    "prepublish": "npm run test",
+    "postpublish": "zip -j build/foobar.zip -- LICENSE README.md build/foobar-bundle.js && cp build/foobar-bundle.js py/foobar/package_data/foobar-bundle.js"
+  },
+  "devDependencies": {
+    "rollup": "0.41.4",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "tape": "4",
+    "uglify-js": "2"
+  },
+  "dependencies": {
+    "d3": "^4.4.1"
+  }
+}
