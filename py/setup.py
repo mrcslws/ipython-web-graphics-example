@@ -10,6 +10,7 @@ setup(name="foobar",
       author_email="{YOUR EMAIL}",
       url="https://github.com/{USERNAME}/foobar",
       packages=find_packages(),
-      package_data={'foobar': ['package_data/*',]},
+      package_data={'foobar': ['foobar/package_data/*',]},
       include_package_data=True,
+      zip_safe=False,
 )
