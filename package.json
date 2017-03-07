@@ -12,7 +12,7 @@
     "url": "https://github.com/{USERNAME}/foobar.git"
   },
   "scripts": {
-    "pretest": "rm -rf build && mkdir build && rollup -c -f umd -n foobar -o build/foobar-bundle.js -- js/index.js && cp build/foobar-bundle.js py/foobar/package_data/foobar-bundle.js",
+    "pretest": "rm -rf build && mkdir build && rollup -c -f umd -n foobar -o build/foobar-bundle.js -- js/index.js && mkdir -p py/foobar/package_data && cp build/foobar-bundle.js py/foobar/package_data/foobar-bundle.js",
     "test": "tape 'js/test/**/*-test.js'",
     "prepublish": "npm run test",
     "postpublish": "zip -j build/foobar.zip -- LICENSE README.md build/foobar-bundle.js && cp build/foobar-bundle.js py/foobar/package_data/foobar-bundle.js"
